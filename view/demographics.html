@@ -88,7 +88,7 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-gleason" aria-label="gleason score">
+            <input type="number" min="2" max="10" class="form-control slc" id="p1-gleason" aria-label="gleason score">
             <label for="p1-gleason">Gleason Score</label>
           </div>
         </div>
@@ -121,20 +121,20 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-ecog" aria-label="ecog score">
+            <input type="number" min="0" max="5" class="form-control slc" id="p1-ecog" aria-label="ecog score">
             <label for="p1-ecog">ECOG score</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-ht" aria-label="height">
-            <label for="p1-ht">Height (in cm)</label>
+            <label for="p1-ht">Height (cm)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-wt" aria-label="weight">
-            <label for="p1-wt">Weight (in kg)</label>
+            <label for="p1-wt">Weight (kg)</label>
           </div>
         </div>
         <div class="col">
@@ -147,19 +147,27 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="text" class="form-control slc" id="p1-bp" aria-label="blood pressure">
+    <!--    <input type="text" class="form-control slc" id="p1-bp" aria-label="blood pressure">    (for reference) -->
+
+            <select class="form-control slc" aria-label="blood pressure" id="p1-bp">
+              <option selected value="none"></option>
+              <option value="systolic">Systolic</option>
+              <option value="diastolic">Diastolic</option>
+            </select>
+
             <label for="p1-bp">Blood Pressure (Systolic/Diastolic)</label>
+
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-hr" aria-label="heart rate">
-            <label for="p1-hr">Heart Rate</label>
+            <label for="p1-hr">Heart Rate (bpm)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-painscore" aria-label="pain score">
+            <input type="number" min="0" max="10" class="form-control slc" id="p1-painscore" aria-label="pain score">
             <label for="p1-painscore">Pain Score</label>
           </div>
         </div>
@@ -188,48 +196,50 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-psa" aria-label="psa">
-            <label for="p1-psa">Prostate-Specific Antigen Levels</label>
+            <input type="number" min="0" step="0.1" class="form-control slc" id="p1-psa" aria-label="psa">
+            <label for="p1-psa">Prostate-Specific Antigen Levels (ng/mL)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-creatinine" aria-label="creatinine">
-            <label for="p1-creatinine">Creatinine</label>
+            <input type="number" min="0" step="0.1" class="form-control slc" id="p1-creatinine" aria-label="creatinine">
+            <label for="p1-creatinine">Creatinine (mg/dL)</label>
           </div>
         </div>
       </div>
+
       <div class="row" style="margin-bottom: 5px;">
+        <p>Complete Blood Count</p>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-wbc" aria-label="wbc">
-            <label for="p1-wbc">White Blood Cell Count</label>
+            <label for="p1-wbc">White Blood Cell Count (billion cells/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-rbc" aria-label="rbc">
-            <label for="p1-rbc">Red Blood Cell Count</label>
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-rbc" aria-label="rbc">
+            <label for="p1-rbc">Red Blood Cell Count (trillion cells/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-hemoglobin" aria-label="hemoglobin">
-            <label for="p1-hemoglobin">Hemoglobin Level</label>
+            <label for="p1-hemoglobin">Hemoglobin Level (g/L)</label>
           </div>
         </div>
       </div>
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-hematocrit" aria-label="hematocrit">
-            <label for="p1-hematocrit">Hematocrit Level</label>
+            <input type="number" min="0" max="100" class="form-control slc" id="p1-hematocrit" aria-label="hematocrit">
+            <label for="p1-hematocrit">Hematocrit Level (%)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-platelet" aria-label="platelet count">
-            <label for="p1-platelet">Platelet Count</label>
+            <label for="p1-platelet">Platelet Count (billion cells/L)</label>
           </div>
         </div>
       </div>
@@ -237,19 +247,19 @@
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-lactate" aria-label="lactate">
-            <label for="p1-lactate">Lactate dehydrogenase Level</label>
+            <label for="p1-lactate">Lactate dehydrogenase Level (U/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-alkaline" aria-label="alkaline">
-            <label for="p1-alkaline">Alkaline phosphatase Level</label>
+            <label for="p1-alkaline">Alkaline phosphatase Level (IU/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
             <input type="number" min="0" class="form-control slc" id="p1-sgpt" aria-label="sgpt, sgot, bilirubins">
-            <label for="p1-sgpt">SGPT, SGOT, Bilirubin Level</label>
+            <label for="p1-sgpt">SGPT, SGOT, Bilirubin Level (U/L)</label>
           </div>
         </div>
       </div>
