@@ -36,14 +36,14 @@
         <div class="row"  style="margin-bottom: 5px;">
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p2-premedications"
+              <input type="text" maxlength="255" class="form-control slc" id="p2-premedications"
                 aria-label="Pre-medications">
               <label for="p2-premedications">Pre-medications</label>
             </div>
           </div>
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p2-medications"
+              <input type="text" maxlength="255" class="form-control slc" id="p2-medications"
                 aria-label="medications">
               <label for="p2-medications">Medications</label>
             </div>
@@ -57,29 +57,33 @@
         <div class="row"  style="margin-bottom: 5px;">
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p2-bp"
-                aria-label="blood pressure">
+              <input type="text" maxlength="255" class="form-control slc" id="p2-bp"
+                aria-label="blood pressure" 
+                onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 47 && event.charCode <= 57))">
               <label for="p2-bp">Blood Pressure (Systolic/Diastolic)</label>
             </div>
           </div>
           <div class="col">
             <div class="form-floating">
-              <input type="number" min="0" class="form-control slc" id="p2-hr" aria-label="heart rate">
-              <label for="p2-hr">Heart Rate</label>
+              <input type="number" min="0" class="form-control slc" id="p2-hr" aria-label="heart rate" 
+              onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57))">
+              <label for="p2-hr">Heart Rate (bpm)</label>
             </div>
           </div>
         </div>
         <div class="row"  style="margin-bottom: 5px;">
           <div class="col">
             <div class="form-floating">
-              <input type="number" min="0" class="form-control slc" id="p2-rr" aria-label="respiration rate">
-              <label for="p2-rr">Respiration Rate</label>
+              <input type="number" min="0" class="form-control slc" id="p2-rr" aria-label="respiration rate" 
+              onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57))">
+              <label for="p2-rr">Respiration Rate (breaths/min)</label>
             </div>
           </div>
           <div class="col">
             <div class="form-floating">
-              <input type="number" min="0" class="form-control slc" id="p2-oxygen" aria-label="oxygen saturation">
-              <label for="p2-oxygen">Oxygen Saturation</label>
+              <input type="number" min="0" max="100" step="0.01" class="form-control slc" id="p2-oxygen" aria-label="oxygen saturation" 
+              onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+              <label for="p2-oxygen">Oxygen Saturation (%)</label>
             </div>
           </div>
         </div>
@@ -91,30 +95,30 @@
         <div class="row"  style="margin-bottom: 5px;">
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p2-dateradioligand"
+              <input type="date" max="9999-12-31" class="form-control slc" id="p2-dateradioligand"
                 aria-label="Date of radioligand">
-              <label for="p2-dateradioligand">Date of PSMA-directed Radiologand Therapy (MM/DD/YYYY)</label>
+              <label for="p2-dateradioligand">Date of PSMA-directed Radiologand Therapy</label>
             </div>
           </div>
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p2-datetherapy"
+              <input type="date" max="9999-12-31" class="form-control slc" id="p2-datetherapy"
                 aria-label="Date of therapy">
-              <label for="p2-datetherapy">Date of Therapy (MM/DD/YYYY)</label>
+              <label for="p2-datetherapy">Date of Therapy</label>
             </div>
           </div>
         </div>
         <div class="row"  style="margin-bottom: 5px;">
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p2-radiopharm"
+              <input type="text" maxlength="255" class="form-control slc" id="p2-radiopharm"
                 aria-label="Radiopharm">
               <label for="p2-radiopharm">Radiopharm</label>
             </div>
           </div>
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p2-activity"
+              <input type="text" maxlength="255" class="form-control slc" id="p2-activity"
                 aria-label="Activity">
               <label for="p2-activity">Activity</label>
             </div>

@@ -301,19 +301,39 @@ submit_button.addEventListener('click', () => {
     const last_name = document.querySelector('#p1-lastname').value
     const age = document.querySelector('#p1-age').value
     const city_of_residence = document.querySelector('#p1-cityresidence').value
-    const date_of_diagnosis = document.querySelector('#p1-datediagnosis').value
-    const date_of_surgery = document.querySelector('#p1-datesurgery').value
-    const histopath_results = document.querySelector('#p1-histopathresult').value
-    const gleason_score = document.querySelector('#p1-gleason').value
-    const date_of_treatment = document.querySelector('#p1-datetreatment').value
-    const treatment_type = (document.querySelector('#p1-treatmenttype').value === 'none') ? '' : document.querySelector('#p1-treatmenttype').value;
-    const ecog_score = document.querySelector('#p1-ecog').value
+
+    var date_of_diagnosis = document.querySelector('#p1-datediagnosis').value
+    if(date_of_diagnosis.length > 9) {
+        const temp_date_of_diagnosis = new Date(date_of_diagnosis);
+        date_of_diagnosis = [('0' + (temp_date_of_diagnosis.getMonth() + 1)).slice(-2), ('0' + temp_date_of_diagnosis.getDate()).slice(-2), 
+            ('000' + temp_date_of_diagnosis.getFullYear()).slice(-4)].join('/');
+    }
+    
+    var date_of_surgery = document.querySelector('#p1-datesurgery').value
+    if(date_of_surgery.length > 9) {
+        const temp_date_of_surgery = new Date(date_of_surgery);
+        date_of_surgery = [('0' + (temp_date_of_surgery.getMonth() + 1)).slice(-2), ('0' + temp_date_of_surgery.getDate()).slice(-2), 
+            ('000' + temp_date_of_surgery.getFullYear()).slice(-4)].join('/');
+    }
+
+    const histopath_results = (document.querySelector('#p1-histopathresult').value == 'none') ? '' : document.querySelector('#p1-histopathresult').value;
+    const gleason_score = (document.querySelector('#p1-gleason').value == 'none')  ? '' : document.querySelector('#p1-gleason').value;
+
+    var date_of_treatment = document.querySelector('#p1-datetreatment').value
+    if(date_of_treatment.length > 9) {
+        const temp_date_of_treatment = new Date(date_of_treatment);
+        date_of_treatment = [('0' + (temp_date_of_treatment.getMonth() + 1)).slice(-2), ('0' + temp_date_of_treatment.getDate()).slice(-2), 
+            ('000' + temp_date_of_treatment.getFullYear()).slice(-4)].join('/');
+    }
+
+    const treatment_type = (document.querySelector('#p1-treatmenttype').value == 'none') ? '' : document.querySelector('#p1-treatmenttype').value;
+    const ecog_score = (document.querySelector('#p1-ecog').value == 'none') ? '' : document.querySelector('#p1-ecog').value;
     const ht = document.querySelector('#p1-ht').value
     const wt = document.querySelector('#p1-wt').value
     const bmi = document.querySelector('#p1-bmi').value
     const bp = document.querySelector('#p1-bp').value
     const hr = document.querySelector('#p1-hr').value
-    const pain_score = document.querySelector('#p1-painscore').value
+    const pain_score = (document.querySelector('#p1-painscore').value == 'none') ? '' : document.querySelector('#p1-painscore').value;
     const local_symptoms = document.querySelector('#p1-localsymptoms').value
     const systemic_symptoms = document.querySelector('#p1-systemicsymptoms').value
     const psa = document.querySelector('#p1-psa').value
@@ -506,6 +526,7 @@ submit_button.addEventListener('click', () => {
         .then((res) => res.json())
         .then(data => {
             if (data[0].event == 'success') {
+                
                 alert(`Patient ${first_name} ${last_name} added successfully`) 
                 location.href = '/'
             }

@@ -287,7 +287,14 @@ const submit_button = document.querySelector('#submit-info')
 submit_button.addEventListener('click', () => {
     //cant be ''
     const patient_id = sessionStorage.getItem('patient_code')
-    const follow_up_date = document.querySelector('#p4-followupdate').value
+
+    var date_of_follow_up = document.querySelector('#p4-followupdate').value
+    if(date_of_follow_up.length > 9) {
+        const temp_date_of_follow_up = new Date(date_of_follow_up);
+        date_of_diagnosis = [('0' + (temp_date_of_follow_up.getMonth() + 1)).slice(-2), ('0' + temp_date_of_follow_up.getDate()).slice(-2), 
+            ('000' + temp_date_of_follow_up.getFullYear()).slice(-4)].join('/');
+    }
+
     const psa = document.querySelector('#p1-psa').value
     const creatinine = document.querySelector('#p1-creatinine').value
     const wbc = document.querySelector('#p1-wbc').value
@@ -379,7 +386,7 @@ submit_button.addEventListener('click', () => {
             headers: new Headers({ 'Content-Type': 'application/json' }),
             body: JSON.stringify({
                 patient_id: patient_id,
-                follow_up_date: follow_up_date,
+                date_of_follow_up: date_of_follow_up,
                 psa: psa,
                 creatinine: creatinine,
                 wbc: wbc,

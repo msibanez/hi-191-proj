@@ -37,15 +37,16 @@
         <div class="row"  style="margin-bottom: 5px;">
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p3-dateposttherapy"
+              <input type="date" max="9999-12-31" class="form-control slc" id="p3-dateposttherapy"
                 aria-label="Date of post-theraphy">
               <label for="p3-dateposttherapy">Date of Post-Therapy and Dosimetry (MM/DD/YYYY)</label>
             </div>
           </div>
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p3-hour"
-                aria-label="Post-Therapy scan hour">
+              <input type="number" min="0" class="form-control slc" id="p3-hour"
+                aria-label="Post-Therapy scan hour"
+                onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57))">
               <label for="p3-hour">Post-Therapy Scan Hour</label>
             </div>
           </div>
@@ -99,24 +100,30 @@
         <div class="row"  style="margin-bottom: 5px;">
           <div class="col">
             <div class="card" style="padding:0px">
-              <div class="card-header">Dosimetry</div>
+              <div class="card-header">Dosimetry (input values with its respective unit and separate by comma if multiple values)</div>
               <div class="card-body">
                 <div class="row" style="margin-bottom: 5px;">
                   <div class="col">
                     <div class="form-floating">
-                      <input type="number" min="0" class="form-control slc" id="p3-dossaliva" aria-label="Dosimetry salivary gland">
+                      <input type="text" maxlength="255" class="form-control slc" id="p3-dossaliva" aria-label="Dosimetry salivary gland"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || event.charCode == 32 || event.charCode == 44 || event.charCode == 46 ||
+                      (event.charCode >= 47 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
                       <label for="p3-dossaliva">Saliva</label>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-floating">
-                      <input type="number" min="0" class="form-control slc" id="p3-doskidr" aria-label="Dosimetry right Kidney">
+                      <input type="text" maxlength="255" class="form-control slc" id="p3-doskidr" aria-label="Dosimetry right Kidney"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || event.charCode == 32 || event.charCode == 44 || event.charCode == 46 ||
+                      (event.charCode >= 47 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
                       <label for="p3-doskidr">Right Kidney</label>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-floating">
-                      <input type="number" min="0" class="form-control slc" id="p3-doskidl" aria-label="Dosimetry left Kidney">
+                      <input type="text" maxlength="255" class="form-control slc" id="p3-doskidl" aria-label="Dosimetry left Kidney"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || event.charCode == 32 || event.charCode == 44 || event.charCode == 46 ||
+                      (event.charCode >= 47 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
                       <label for="p3-doskidl">Left Kidney</label>
                     </div>
                   </div>

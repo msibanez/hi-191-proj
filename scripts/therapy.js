@@ -13,14 +13,28 @@ const submit_therapy = document.querySelector('#submit-therapy')
 
 submit_therapy.addEventListener('click', () => {
     const patient_id = sessionStorage.getItem('patient_code')
-    const date_radioligand = document.querySelector('#p2-dateradioligand').value
+
+    var date_radioligand = document.querySelector('#p2-dateradioligand').value
+    if(date_radioligand.length > 9) {
+        const temp_date_radioligand = new Date(date_radioligand);
+        date_radioligand = [('0' + (temp_date_radioligand.getMonth() + 1)).slice(-2), ('0' + temp_date_radioligand.getDate()).slice(-2), 
+            ('000' + temp_date_radioligand.getFullYear()).slice(-4)].join('/');
+    }
+
     const meds = document.querySelector('#p2-medications').value
     const pre_meds = document.querySelector('#p2-premedications').value
     const p2_bp = document.querySelector('#p2-bp').value
     const p2_hr = document.querySelector('#p2-hr').value
     const p2_rr = document.querySelector('#p2-rr').value
     const oxygen_sat = document.querySelector('#p2-oxygen').value
-    const date_therapy = document.querySelector('#p2-datetherapy').value
+
+    var date_therapy = document.querySelector('#p2-datetherapy').value
+    if(date_therapy.length > 9) {
+        const temp_date_therapy = new Date(date_therapy);
+        date_therapy = [('0' + (temp_date_therapy.getMonth() + 1)).slice(-2), ('0' + temp_date_therapy.getDate()).slice(-2), 
+            ('000' + temp_date_therapy.getFullYear()).slice(-4)].join('/');
+    }
+
     const radiopharm = document.querySelector('#p2-radiopharm').value
     const activity = document.querySelector('#p2-activity').value
     const have_fatigue = document.querySelector('#p2-fatigue').checked

@@ -14,17 +14,24 @@ submit_posttherapy.addEventListener('click', () => {
     // get all values then post request
     const patient_id = parseInt(sessionStorage.getItem('patient_code'));
     const therapy_id = parseInt(sessionStorage.getItem('therapy_id'));
-    const date_post_therapy = document.querySelector('#p3-dateposttherapy').value;
+
+    var date_post_therapy = document.querySelector('#p3-dateposttherapy').value;
+    if(date_post_therapy.length > 9) {
+        const temp_date_post_therapy = new Date(date_post_therapy);
+        date_post_therapy = [('0' + (temp_date_post_therapy.getMonth() + 1)).slice(-2), ('0' + temp_date_post_therapy.getDate()).slice(-2), 
+            ('000' + temp_date_post_therapy.getFullYear()).slice(-4)].join('/');
+    }
+
     const pts_hour = document.querySelector('#p3-hour').value;
     const with_spect = (document.querySelector('#p3-withspect').checked) ? true : ((document.querySelector('#p3-withoutspect').checked)? false : null);
     const lesion_prostate = document.querySelector('#p3-prostate').checked;
-    const lesion_lymph= document.querySelector('#p3-lymph').checked;
-    const lesion_bones= document.querySelector('#p3-bones').checked;
-    const lesion_lungs= document.querySelector('#p3-lungs').checked;
-    const lesion_liver= document.querySelector('#p3-liver').checked;
-    const dosimetry_saliva = parseFloat(document.querySelector('#p3-dossaliva').value);
-    const dosimetry_kidney_left = parseFloat(document.querySelector('#p3-doskidl').value);
-    const dosimetry_kidney_right = parseFloat(document.querySelector('#p3-doskidr').value);
+    const lesion_lymph = document.querySelector('#p3-lymph').checked;
+    const lesion_bones = document.querySelector('#p3-bones').checked;
+    const lesion_lungs = document.querySelector('#p3-lungs').checked;
+    const lesion_liver = document.querySelector('#p3-liver').checked;
+    const dosimetry_saliva = document.querySelector('#p3-dossaliva').value;
+    const dosimetry_kidney_left = document.querySelector('#p3-doskidl').value;
+    const dosimetry_kidney_right = document.querySelector('#p3-doskidr').value;
     fetch('/request/add-patient/post-therapy', {
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),

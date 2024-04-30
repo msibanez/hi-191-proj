@@ -33,9 +33,9 @@
         <div class="row">
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control slc" id="p4-followupdate"
+              <input type="date" max="9999-12-31" class="form-control slc" id="p4-followupdate"
                 aria-label="Date of therapy">
-              <label for="p4-followupdate">Date of Follow-up (MM/DD/YYYY)</label>
+              <label for="p4-followupdate">Date of Follow-up</label>
             </div>
           </div>
         </div>
@@ -48,13 +48,15 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" step="0.1" class="form-control slc" id="p1-psa" aria-label="psa">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-psa" aria-label="psa"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-psa">Prostate-Specific Antigen Levels (ng/mL)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" step="0.1" class="form-control slc" id="p1-creatinine" aria-label="creatinine">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-creatinine" aria-label="creatinine"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-creatinine">Creatinine (mg/dL)</label>
           </div>
         </div>
@@ -62,19 +64,22 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-wbc" aria-label="wbc">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-wbc" aria-label="wbc"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-wbc">White Blood Cell Count (billion cells/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" step="0.1" class="form-control slc" id="p1-rbc" aria-label="rbc">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-rbc" aria-label="rbc"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-rbc">Red Blood Cell Count (trillion cells/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-hemoglobin" aria-label="hemoglobin">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-hemoglobin" aria-label="hemoglobin"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-hemoglobin">Hemoglobin Level (g/L)</label>
           </div>
         </div>
@@ -82,13 +87,15 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" max="100" class="form-control slc" id="p1-hematocrit" aria-label="hematocrit">
+            <input type="number" min="0" max="100" step="0.01" class="form-control slc" id="p1-hematocrit" aria-label="hematocrit"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-hematocrit">Hematocrit Level (%)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-platelet" aria-label="platelet count">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-platelet" aria-label="platelet count"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-platelet">Platelet Count (billion cells/L)</label>
           </div>
         </div>
@@ -96,19 +103,22 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-lactate" aria-label="lactate">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-lactate" aria-label="lactate"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-lactate">Lactate dehydrogenase Level (U/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-alkaline" aria-label="alkaline">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-alkaline" aria-label="alkaline"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-alkaline">Alkaline phosphatase Level (IU/L)</label>
           </div>
         </div>
         <div class="col">
           <div class="form-floating">
-            <input type="number" min="0" class="form-control slc" id="p1-sgpt" aria-label="sgpt, sgot, bilirubins">
+            <input type="number" min="0" step="0.01" class="form-control slc" id="p1-sgpt" aria-label="sgpt, sgot, bilirubins"
+            onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
             <label for="p1-sgpt">SGPT, SGOT, Bilirubin Level (U/L)</label>
           </div>
         </div>
@@ -186,7 +196,7 @@
             <div class="card-header">&nbsp;</div>
             <div class="card-body">
               <div class="form-floating">
-                <input type="text" class="form-control slc" id="p1-metastasisloc" aria-label="metastasis location">
+                <input type="text" maxlength="255" class="form-control slc" id="p1-metastasisloc" aria-label="metastasis location">
                 <label for="p1-metastasisloc">Metastasis Location</label>
               </div>
             </div>
@@ -239,23 +249,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesiona-pros-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesiona-pros-location"
                       aria-label="prostate lesion location">
                     <label for="lesiona-pros-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-pros-suv"
-                      aria-label="prostate lesion suv">
-                    <label for="lesiona-pros-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-pros-suv"
+                      aria-label="prostate lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-pros-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-pros-measurement"
-                      aria-label="prostate lesion measurement">
-                    <label for="lesiona-pros-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-pros-measurement"
+                      aria-label="prostate lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-pros-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -288,23 +300,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesiona-lymph-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesiona-lymph-location"
                       aria-label="lymph nodes lesion location">
                     <label for="lesiona-lymph-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-lymph-suv"
-                      aria-label="lymph nodes lesion suv">
-                    <label for="lesiona-lymph-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-lymph-suv"
+                      aria-label="lymph nodes lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-lymph-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-lymph-measurement"
-                      aria-label="lymph nodes lesion measurement">
-                    <label for="lesiona-lymph-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-lymph-measurement"
+                      aria-label="lymph nodes lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-lymph-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -337,23 +351,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesiona-bone-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesiona-bone-location"
                       aria-label="bone lesion location">
                     <label for="lesiona-bone-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-bone-suv"
-                      aria-label="bone lesion suv">
-                    <label for="lesiona-bone-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-bone-suv"
+                      aria-label="bone lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-bone-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-bone-measurement"
-                      aria-label="bone lesion measurement">
-                    <label for="lesiona-bone-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-bone-measurement"
+                      aria-label="bone lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-bone-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -386,23 +402,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesiona-brain-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesiona-brain-location"
                       aria-label="brain lesion location">
                     <label for="lesiona-brain-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-brain-suv"
-                      aria-label="brain lesion suv">
-                    <label for="lesiona-brain-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-brain-suv"
+                      aria-label="brain lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-brain-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-brain-measurement"
-                      aria-label="brain lesion measurement">
-                    <label for="lesiona-brain-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-brain-measurement"
+                      aria-label="brain lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-brain-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -435,23 +453,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesiona-lung-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesiona-lung-location"
                       aria-label="lung lesion location">
                     <label for="lesiona-lung-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-lung-suv"
-                      aria-label="lung lesion suv">
-                    <label for="lesiona-lung-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-lung-suv"
+                      aria-label="lung lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-lung-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-lung-measurement"
-                      aria-label="lung lesion measurement">
-                    <label for="lesiona-lung-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-lung-measurement"
+                      aria-label="lung lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-lung-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -484,23 +504,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesiona-liver-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesiona-liver-location"
                       aria-label="liver lesion location">
                     <label for="lesiona-liver-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-liver-suv"
-                      aria-label="liver lesion suv">
-                    <label for="lesiona-liver-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-liver-suv"
+                      aria-label="liver lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-liver-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-liver-measurement"
-                      aria-label="liver lesion measurement">
-                    <label for="lesiona-liver-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-liver-measurement"
+                      aria-label="liver lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-liver-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -533,23 +555,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesiona-other-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesiona-other-location"
                       aria-label="other lesion location">
                     <label for="lesiona-other-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-other-suv"
-                      aria-label="other lesion suv">
-                    <label for="lesiona-other-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-other-suv"
+                      aria-label="other lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-other-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesiona-other-measurement"
-                      aria-label="other lesion measurement">
-                    <label for="lesiona-other-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesiona-other-measurement"
+                      aria-label="other lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesiona-other-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -599,23 +623,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesionb-pros-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesionb-pros-location"
                       aria-label="prostate lesion location">
                     <label for="lesionb-pros-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-pros-suv"
-                      aria-label="prostate lesion suv">
-                    <label for="lesionb-pros-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-pros-suv"
+                      aria-label="prostate lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-pros-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-pros-measurement"
-                      aria-label="prostate lesion measurement">
-                    <label for="lesionb-pros-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-pros-measurement"
+                      aria-label="prostate lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-pros-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -648,23 +674,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesionb-lymph-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesionb-lymph-location"
                       aria-label="lymph nodes lesion location">
                     <label for="lesionb-lymph-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-lymph-suv"
-                      aria-label="lymph nodes lesion suv">
-                    <label for="lesionb-lymph-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-lymph-suv"
+                      aria-label="lymph nodes lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-lymph-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-lymph-measurement"
-                      aria-label="lymph nodes lesion measurement">
-                    <label for="lesionb-lymph-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-lymph-measurement"
+                      aria-label="lymph nodes lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-lymph-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -697,23 +725,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesionb-bone-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesionb-bone-location"
                       aria-label="bone lesion location">
                     <label for="lesionb-bone-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-bone-suv"
-                      aria-label="bone lesion suv">
-                    <label for="lesionb-bone-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-bone-suv"
+                      aria-label="bone lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-bone-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-bone-measurement"
-                      aria-label="bone lesion measurement">
-                    <label for="lesionb-bone-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-bone-measurement"
+                      aria-label="bone lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-bone-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -746,23 +776,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesionb-brain-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesionb-brain-location"
                       aria-label="brain lesion location">
                     <label for="lesionb-brain-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-brain-suv"
-                      aria-label="brain lesion suv">
-                    <label for="lesionb-brain-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-brain-suv"
+                      aria-label="brain lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-brain-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-brain-measurement"
-                      aria-label="brain lesion measurement">
-                    <label for="lesionb-brain-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-brain-measurement"
+                      aria-label="brain lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-brain-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -795,23 +827,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesionb-lung-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesionb-lung-location"
                       aria-label="lung lesion location">
                     <label for="lesionb-lung-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-lung-suv"
-                      aria-label="lung lesion suv">
-                    <label for="lesionb-lung-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-lung-suv"
+                      aria-label="lung lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-lung-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-lung-measurement"
-                      aria-label="lung lesion measurement">
-                    <label for="lesionb-lung-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-lung-measurement"
+                      aria-label="lung lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-lung-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -844,23 +878,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesionb-liver-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesionb-liver-location"
                       aria-label="liver lesion location">
                     <label for="lesionb-liver-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-liver-suv"
-                      aria-label="liver lesion suv">
-                    <label for="lesionb-liver-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-liver-suv"
+                      aria-label="liver lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-liver-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-liver-measurement"
-                      aria-label="liver lesion measurement">
-                    <label for="lesionb-liver-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-liver-measurement"
+                      aria-label="liver lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-liver-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -893,23 +929,25 @@
               <div class="row">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control slc" id="lesionb-other-location"
+                    <input type="text" maxlength="255" class="form-control slc" id="lesionb-other-location"
                       aria-label="other lesion location">
                     <label for="lesionb-other-location">Location</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-other-suv"
-                      aria-label="other lesion suv">
-                    <label for="lesionb-other-suv">SUV</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-other-suv"
+                      aria-label="other lesion suv"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-other-suv">SUV (g/ml)</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="number" min="0" class="form-control slc" id="lesionb-other-measurement"
-                      aria-label="other lesion measurement">
-                    <label for="lesionb-other-measurement">Measurement (in cm)</label>
+                    <input type="number" min="0" step="0.01" class="form-control slc" id="lesionb-other-measurement"
+                      aria-label="other lesion measurement"
+                      onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)">
+                    <label for="lesionb-other-measurement">Measurement (cm)</label>
                   </div>
                 </div>
               </div>
@@ -941,7 +979,7 @@
       <div class="row" style="margin-bottom: 5px;">
         <div class="col">
           <div class="form-floating">
-            <textarea class="form-control slc" id="p1-plan"></textarea>
+            <textarea class="form-control slc" maxlength="255" id="p1-plan"></textarea>
             <label for="p1-plan">Plan</label>
           </div>
         </div>

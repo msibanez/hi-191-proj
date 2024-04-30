@@ -170,9 +170,9 @@ const functions = {
                                     t.boolean('lesion_bones');
                                     t.boolean('lesion_lungs');
                                     t.boolean('lesion_liver');
-                                    t.float('dosimetry_saliva');
-                                    t.float('dosimetry_kidney_left');
-                                    t.float('dosimetry_kidney_right');
+                                    t.string('dosimetry_saliva');
+                                    t.string('dosimetry_kidney_left');
+                                    t.string('dosimetry_kidney_right');
                                     t.timestamp('created_at').defaultTo(db.fn.now());
                                 })
                                     .then(console.log('created part3'))
